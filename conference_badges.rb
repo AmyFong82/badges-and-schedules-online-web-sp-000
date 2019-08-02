@@ -9,11 +9,9 @@ def batch_badge_creator(list)
 end
 
 def assign_rooms(list)
-    room_messages = []
-    list.each_with_index{|name, index|
-      room_messages << "Hello, #{name}! You'll be assigned to room #{index+1}!"
+    list.each_with_index.collect{|name, index|
+      "Hello, #{name}! You'll be assigned to room #{index+1}!"
     }
-    room_messages
 end
 
 # use .map to assign_rooms
